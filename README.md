@@ -1,9 +1,9 @@
-###项目架构
+### 项目架构
 ![Image text](./项目架构图.png)
 
-##项目LICENSE
+## 项目LICENSE
     请遵守LICENSE开源协议
-##项目模块说明
+## 项目模块说明
     
     javakc
         ├── spring-cloud-core
@@ -29,7 +29,7 @@
         ├── README.md (项目说明)
         └── pom.xml (maven core setting)
     
-###项目技术
+### 项目技术
     SOA服务框架 SpringFramework、SpringBoot、SpringCloud、RestFul
     分布式缓存 Redis
     模块化管理 Maven
@@ -42,7 +42,7 @@
     日志管理 SLF4J、Log4j
  
     
-###SpringCloud
+### SpringCloud
     
     Ribbon 客户端负载均衡，特性有区域亲和、重试机制
         已添加
@@ -63,19 +63,19 @@
     Stream 消息驱动，有Sink、Source、Processor三种通道，特性有订阅发布、消费组、消息分区
         待添加...
         
-##项目路径描述
-#####spring-cloud-eureka-server
+## 项目路径描述
+##### spring-cloud-eureka-server
     http://127.0.0.1:8001 (服务注册发现-服务器1)
     http://127.0.0.1:8002 (服务注册发现-服务器2)
-#####spring-cloud-config-server
+##### spring-cloud-config-server
     http://127.0.0.1:8050
     http://127.0.0.1:8050/actuator/refresh (更新配置后调用执行)
-#####spring-cloud-config-bus
+##### spring-cloud-config-bus
     http://127.0.0.1:8060
     http://127.0.0.1:8060/actuator/refresh (更新配置后调用执行)
-#####spring-cloud-admin-server
+##### spring-cloud-admin-server
     http://127.0.0.1:8070
-#####spring-cloud-gateway-api
+##### spring-cloud-gateway-api
     http://127.0.0.1:8080/126
     http://127.0.0.1:8080/163
     http://127.0.0.1:8080/system/user
