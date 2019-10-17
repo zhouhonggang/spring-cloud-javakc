@@ -1,0 +1,8 @@
+server:
+  port: 9001
+
+info:
+  app:
+    name: '@system-user-1@'
+    description: '@系统管理-用户管理-分布式微服务1@'
+    version: '@v0.1.1@'

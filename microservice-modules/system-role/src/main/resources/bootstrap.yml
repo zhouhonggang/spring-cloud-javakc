@@ -1,0 +1,51 @@
+server:
+  port: 9011
+
+spring:
+  application:
+    name: system-role
+
+  profiles:
+    include: jpa
+
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: spring-cloud-config-server
+      uri: http://127.0.0.1:8050
+      label: master
+      profile: dev
+    bus:
+      trace:
+        enabled: true
+
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 100MB
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh,health,info,bus-refresh
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8001/eureka/,http://127.0.0.1:8002/eureka/
+  instance:
+    prefer-ip-address: true
+
+info:
+  app:
+    name: '@system-system@'
+    description: '@系统管理-角色管理-分布式微服务@'
+    version: '@v0.1.1@'

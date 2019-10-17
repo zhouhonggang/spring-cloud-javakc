@@ -1,0 +1,39 @@
+spring:
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: spring-cloud-config-server
+      uri: http://127.0.0.1:8050
+      label: master
+      profile: dev
+    bus:
+      #启用spring cloud config bus功能
+      enabled: true
+      #启用spring cloud config bus刷新
+      refresh:
+        enabled: true
+      trace:
+        #开启跟踪总线事件
+        enabled: true
+
+  #通过rabbitmq开启自动推送
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+        exclude: env
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8001/eureka/,http://127.0.0.1:8002/eureka/
+  instance:
+    prefer-ip-address: true

@@ -1,0 +1,14 @@
+server:
+  port: 8060
+
+spring:
+  application:
+    name: spring-cloud-config-bus
+  profiles:
+    active: dev
+
+info:
+  app:
+    name: "@project.name.bus@"
+    description: "@project.description.bus@"
+    version: "@project.version.bus@"

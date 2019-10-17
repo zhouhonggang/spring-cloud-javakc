@@ -1,0 +1,11 @@
+server:
+  port: 8001
+
+spring:
+  profiles:
+    active: server1
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:8002/eureka/

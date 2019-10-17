@@ -1,0 +1,60 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: spring-cloud-gateway-api
+  cloud:
+    gateway:
+      routes:
+      - id: system-user
+        uri: lb://system-user
+        predicates:
+        - Path=/system/user/**
+
+      - id: system-role
+        uri: lb://system-role
+        predicates:
+        - Path=/system/role/**
+
+      - id: news-163
+        uri: http://www.163.com/
+        predicates:
+        - Path=/163
+        filters:
+        - name: Hystrix
+          args:
+            name: fallbackCommand
+            fallbackUri: forward:/hystrix/fallback
+      default-filters:
+      - name: LogGatewayFilter
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    status-page-url-path: /actuator/info
+    health-check-url-path: /actuator/health
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://127.0.0.1:8001/eureka/,http://127.0.0.1:8002/eureka/
+    enabled: true
+
+logging:
+  level:
+    org:
+      springframework:
+        cloud:
+          gateway: debug
+#logging:
+#  level:
+#    org.springframework.cloud.gateway: WARN
+#    org.springframework.http.server.reactive: DEBUG
+#    org.springframework.web.reactive: DEBUG
+#    reactor.ipc.netty: DEBUG
+info:
+  app:
+    name: "@project.name.gateway@"
+    description: "@project.description.gateway@"
+    version: "@project.version.gateway@"

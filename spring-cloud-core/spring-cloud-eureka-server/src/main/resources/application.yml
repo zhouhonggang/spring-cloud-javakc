@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: spring-cloud-eureka-server
+
+eureka:
+  instance:
+    #eureka的client注册到server时默认是使用hostname而不是ip,需要使用ip
+    prefer-ip-address: true
+    #eureka主机名称
+    hostname: localhost
+  client:
+    #表示是否从Eureka Server获取注册信息，默认为true
+    fetch-registry: false
+    #表示是否将自己注册到Eureka Server，默认为true
+    register-with-eureka: false
+  server:
+    #开启Eureka Server自我保护机制
+    enable-self-preservation: true
+    #连接对等节点超时时间默认200单位毫秒
+    peer-node-connect-timeout-ms: 1000

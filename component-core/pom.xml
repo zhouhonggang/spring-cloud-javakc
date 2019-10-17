@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <parent>
+        <groupId>com.zhou</groupId>
+        <artifactId>spring-cloud-javakc</artifactId>
+        <version>2.6-SNAPSHOT</version>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>component-core</artifactId>
+    <version>2.6-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <!--定义项目entity modules-->
+        <module>component-data-entity</module>
+        <!--定义项目jpa modules-->
+        <module>component-data-jpa</module>
+    </modules>
+
+    <properties>
+        <!--druid数据库连接池-->
+        <druid.version>1.1.10</druid.version>
+        <!--数据库驱动版本定义-->
+        <oracle.version>11.1.0.1</oracle.version><!-- 当你看到这的时候记得修改为自己的版本, 重要事情说一遍 -->
+        <mysql.version>8.0.13</mysql.version><!-- 当你看到这的时候记得修改为自己的版本, 重要事情说再说一遍 -->
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!--spring-boot-druid-->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>${druid.version}</version>
+            </dependency>
+            <!--数据库驱动配置-->
+            <dependency>
+                <groupId>com.oracle</groupId>
+                <artifactId>ojdbc6</artifactId>
+                <version>${oracle.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+
+</project>

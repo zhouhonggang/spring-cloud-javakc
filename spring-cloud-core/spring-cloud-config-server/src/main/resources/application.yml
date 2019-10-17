@@ -1,0 +1,42 @@
+server:
+  port: 8050
+
+spring:
+  application:
+    name: spring-cloud-config-server
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+
+        #git远程仓库配置
+#        git:
+#          uri: https://gitee.com/zhouhonggang/javakc.git
+#          searchPaths: /spring-cloud-core/spring-cloud-config-server/src/main/resources/config
+#      label: master
+
+        #native本地仓库
+        native:
+          search-locations: /config
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, info, refresh
+
+eureka:
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 15
+  client:
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:8001/eureka/,http://${eureka.instance.hostname}:8002/eureka/
+
+info:
+  app:
+    name: "@project.name.config@"
+    description: "@project.description.config@"
+    version: "@project.version.config@"

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <parent>
+        <artifactId>spring-cloud-javakc</artifactId>
+        <groupId>com.zhou</groupId>
+        <version>2.6-SNAPSHOT</version>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>microservice-modules</artifactId>
+    <version>2.6-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>system-user</module>
+        <module>system-role</module>
+    </modules>
+
+    <properties>
+        <!--poi excel-->
+        <poi.version>3.17</poi.version>
+        <!--itext word-->
+        <itext.version>2.1.7</itext.version>
+        <!--file upload -->
+        <commons-file-upload.version>1.3</commons-file-upload.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.zhou</groupId>
+            <artifactId>component-data-jpa</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.zhou</groupId>
+            <artifactId>component-data-entity</artifactId>
+        </dependency>
+    </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>commons-fileupload</groupId>
+                <artifactId>commons-fileupload</artifactId>
+                <version>${commons-file-upload.version}</version>
+            </dependency>
+            <!--poi解析处理excel-->
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi</artifactId>
+                <version>${poi.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi-ooxml</artifactId>
+                <version>${poi.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi-ooxml-schemas</artifactId>
+                <version>${poi.version}</version>
+            </dependency>
+
+            <!--itext 处理 word 文档-->
+            <dependency>
+                <groupId>com.lowagie</groupId>
+                <artifactId>itext</artifactId>
+                <version>${itext.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.lowagie</groupId>
+                <artifactId>itext-rtf</artifactId>
+                <version>${itext.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+
+</project>

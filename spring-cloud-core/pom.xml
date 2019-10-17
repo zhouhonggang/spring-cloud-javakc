@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <parent>
+        <artifactId>spring-cloud-javakc</artifactId>
+        <groupId>com.zhou</groupId>
+        <version>2.6-SNAPSHOT</version>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>spring-cloud-core</artifactId>
+    <version>2.6-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <!--服务注册-->
+        <module>spring-cloud-eureka-server</module>
+        <!--配置管理-->
+        <module>spring-cloud-config-server</module>
+        <!--配置刷新-->
+        <module>spring-cloud-config-bus</module>
+        <!--服务监控-->
+        <module>spring-cloud-admin-server</module>
+        <!--服务网关-->
+        <module>spring-cloud-gateway-api</module>
+        <module>spring-cloud-security-oauth2</module>
+    </modules>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+    </dependencies>
+
+</project>

@@ -1,0 +1,8 @@
+server:
+  port: 9002
+
+info:
+  app:
+    name: '@system-user-2@'
+    description: '@系统管理-用户管理-分布式微服务2@'
+    version: '@v0.1.1@'
