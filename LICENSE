@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2019 Zhou Hong Gang
+Copyright (c) 2019 周宏刚
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -19,3 +19,11 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+授权协议声明：
+1.您可以免费使用、修改和衍生代码，但不允许修改后和衍生的代码做为闭源软件发布。
+2.修改后和衍生的代码必须也按照当前协议进行流通，对修改后和衍生的代码必须向社会公开。
+3.如果您修改了代码，需要在被修改的文件中进行说明，并遵守代码格式规范，帮助他人更好的理解您的用意。
+4.在延伸的代码中（修改和有源代码衍生的代码中）需要带有原来代码中的协议、版权声明和其他原作者规定 需要包含的说明
+（请尊重原作者的著作权，不要删除或修改文件中的@author信息）。
+5.本项目仅用于学习和交流，未得到官方授权不得用于商业用途。
