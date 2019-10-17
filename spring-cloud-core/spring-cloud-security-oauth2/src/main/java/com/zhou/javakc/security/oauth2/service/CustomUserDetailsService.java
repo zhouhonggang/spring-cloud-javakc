@@ -31,7 +31,6 @@ public class CustomUserDetailsService implements UserDetailsService {
         List<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>();
         authorities.add(new SimpleGrantedAuthority("ROLE_ADMIN"));
 
-        new CustomUserDetail("", "", authorities);
         return null;
     }
 
