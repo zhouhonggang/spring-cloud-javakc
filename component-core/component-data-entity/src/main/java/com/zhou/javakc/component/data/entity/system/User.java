@@ -28,8 +28,8 @@ public class User extends Base implements Serializable {
 
     @Id
     @Column(name = "user_id")
-    @GeneratedValue(generator = "paymentableGenerator")
-    @GenericGenerator(name = "paymentableGenerator", strategy = "uuid")
+    @GeneratedValue(generator = "generator")
+    @GenericGenerator(name = "generator", strategy = "uuid")
     private String userId;
     /**
      * 用户系统昵称
@@ -46,7 +46,7 @@ public class User extends Base implements Serializable {
      * 用户登陆名称
      */
     @NotBlank(message="登陆名不能为空")
-    @Size(min=3, max=16, message = "登录名长度要求在6-16位之间")
+    @Size(min=3, max=16, message = "登录名长度要求在3-16位之间")
     @Column(name = "login_name")
     private String loginName;
     /**

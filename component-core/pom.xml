@@ -20,6 +20,8 @@
         <module>component-data-entity</module>
         <!--定义项目jpa modules-->
         <module>component-data-jpa</module>
+        <!--定义项目redis modules-->
+        <module>component-data-redis</module>
     </modules>
 
     <properties>

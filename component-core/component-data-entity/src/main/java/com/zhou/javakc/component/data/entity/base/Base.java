@@ -29,15 +29,15 @@ public abstract class Base {
     /**
      * 添加人(待添加)
      */
-    @OneToOne
-    @JoinColumn(name = "add_user", referencedColumnName = "user_id")
-    private User addUser;
+//    @OneToOne
+//    @JoinColumn(name = "add_user", referencedColumnName = "user_id")
+//    private User addUser;
     /**
      * 修改人(待添加)
      */
-    @OneToOne
-    @JoinColumn(name = "modify_user", referencedColumnName = "user_id")
-    private User modifyUser;
+//    @OneToOne
+//    @JoinColumn(name = "modify_user", referencedColumnName = "user_id")
+//    private User modifyUser;
 
     /**
      * 注册日期
