@@ -11,9 +11,7 @@
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>system-user</artifactId>
-    <version>2.6-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <artifactId>javakc-test</artifactId>
 
     <dependencies>
         <!--配置获取自动刷新-->
@@ -34,11 +32,7 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
-        <dependency>
-            <groupId>commons-fileupload</groupId>
-            <artifactId>commons-fileupload</artifactId>
-        </dependency>
+        <!--引入poi依赖-->
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi</artifactId>
@@ -46,10 +40,6 @@
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi-ooxml</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.poi</groupId>
-            <artifactId>poi-ooxml-schemas</artifactId>
         </dependency>
     </dependencies>
 

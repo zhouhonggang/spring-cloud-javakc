@@ -1,4 +1,4 @@
-package com.zhou.javakc.system.user;
+package com.zhou.javakc.javakc.test;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -9,17 +9,20 @@ import org.springframework.context.annotation.ComponentScan;
 /**
  * @author zhou
  * @version v0.0.1
- * @date 2019-08-07 13:59
+ * @date 2019-10-18 14:04
  */
 @SpringBootApplication
 @EnableEurekaClient
 @EntityScan("com.zhou.javakc.component.data.entity.*")
-@ComponentScan(basePackages={"com.zhou.javakc.component.data.entity.config", "com.zhou.javakc.system.user"})
-public class SystemUserApplication {
+@ComponentScan(basePackages={
+        "com.zhou.javakc.component.data.entity.config",
+        "com.zhou.javakc.component.data.redis.config",
+        "com.zhou.javakc.javakc.test"
+})
+public class JavakcTestApplication {
 
     public static void main(String[] args) {
-//        System.setProperty("spring.profiles.active","dev");
-        SpringApplication.run(SystemUserApplication.class, args);
+        SpringApplication.run(JavakcTestApplication.class, args);
     }
 
 }

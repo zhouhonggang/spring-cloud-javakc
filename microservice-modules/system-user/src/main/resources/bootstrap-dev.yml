@@ -1,6 +1,11 @@
 server:
   port: 9001
 
+spring:
+  cloud:
+    config:
+      profile: dev
+
 info:
   app:
     name: '@system-user-1@'

@@ -1,6 +1,11 @@
 server:
   port: 9002
 
+spring:
+  cloud:
+    config:
+      profile: prod
+
 info:
   app:
     name: '@system-user-2@'

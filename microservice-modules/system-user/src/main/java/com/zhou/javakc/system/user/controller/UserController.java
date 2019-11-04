@@ -6,8 +6,10 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.data.domain.Page;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.util.ResourceUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -32,6 +34,14 @@ public class UserController {
 
     @Autowired
     private UserService userService;
+
+    @Value("${name}")
+    private String name;
+
+    @GetMapping("user")
+    public String get(){
+        return name;
+    }
 
     @ApiOperation(value="展示用户", notes="分页查询用户列表")
     @ApiImplicitParam(name = "entity", value = "用户详细实体User", required = true, dataType = "User")
