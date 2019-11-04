@@ -49,3 +49,10 @@ eureka:
       defaultZone: http://127.0.0.1:8001/eureka/,http://127.0.0.1:8002/eureka/
   instance:
     prefer-ip-address: true
+
+logging:
+  level:
+    org.springframework.cloud.gateway: WARN
+    org.springframework.http.server.reactive: DEBUG
+    org.springframework.web.reactive: DEBUG
+    reactor.ipc.netty: DEBUG

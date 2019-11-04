@@ -19,6 +19,7 @@
         │
         ├── component-core
         │   ├──component-data-entity(公共组件-实体类)
+        │   ├──component-data-redis(公共组件-Redis)
         │   └──component-data-jpa(公共组件-JPA)
         │
         ├── db(数据库文件)

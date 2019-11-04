@@ -26,6 +26,7 @@
         <module>spring-cloud-admin-server</module>
         <!--服务网关-->
         <module>spring-cloud-gateway-api</module>
+        <!--安全校验-->
         <module>spring-cloud-security-oauth2</module>
     </modules>
 

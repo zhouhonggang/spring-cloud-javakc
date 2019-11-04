@@ -23,25 +23,25 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-gateway</artifactId>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.springframework.cloud</groupId>
-                    <artifactId>spring-cloud-gateway-core</artifactId>
-                </exclusion>
-            </exclusions>
+            <!--<exclusions>-->
+                <!--<exclusion>-->
+                    <!--<groupId>org.springframework.cloud</groupId>-->
+                    <!--<artifactId>spring-cloud-gateway-core</artifactId>-->
+                <!--</exclusion>-->
+            <!--</exclusions>-->
         </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-gateway-core</artifactId>
-            <version>${gateway-core.version}</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.cloud</groupId>-->
+            <!--<artifactId>spring-cloud-gateway-core</artifactId>-->
+            <!--<version>${gateway-core.version}</version>-->
+        <!--</dependency>-->
 
         <!--服务注册发现-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
-        <!--服务熔断降级-->
+        <!--服务熔断降级 雪崩效应-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
