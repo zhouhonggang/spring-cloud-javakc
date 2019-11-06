@@ -28,6 +28,8 @@
         <module>spring-cloud-gateway-api</module>
         <!--安全校验-->
         <module>spring-cloud-security-oauth2</module>
+        <!--负载均衡-->
+        <module>spring-cloud-eureka-ribbon</module>
     </modules>
 
     <dependencies>

@@ -1,0 +1,10 @@
+server:
+  port: 8090
+spring:
+  application:
+    name: spring-cloud-eureka-ribbon
+  cloud:
+    loadbalancer:
+      retry:
+        #开启重试机制
+        enabled: true

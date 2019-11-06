@@ -5,8 +5,8 @@
          http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <parent>
-        <artifactId>microservice-modules</artifactId>
         <groupId>com.zhou</groupId>
+        <artifactId>microservice-modules</artifactId>
         <version>2.6-SNAPSHOT</version>
     </parent>
 

@@ -1,5 +1,5 @@
 ### 项目架构
-![Image text](./项目架构图.png)
+![Image text](项目架构图.png)
 
 ## 项目LICENSE
     请遵守LICENSE开源协议
@@ -24,7 +24,12 @@
         │
         ├── db(数据库文件)
         │   ├──javakc-mysql.sql
-        │   └──javakc-oracle.sql
+        │   └──javakc-oracle.dmp
+        │
+        ├── config(微服务配置文件)
+        │   ├──system-role-dev.yml
+        │   ├──system-user-dev.yml
+        │   └──system-user-prod.yml
         │
         ├── LICENSE (版权说明)
         ├── README.md (项目说明)
