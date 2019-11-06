@@ -4,20 +4,24 @@ server:
 spring:
   application:
     name: spring-cloud-config-server
+
+#  native 本地仓库配置
 #  profiles:
 #    active: native
+#  cloud:
+#    config:
+#      server:
+#        native:
+#          search-locations: /config
+
+#  master git仓库配置
   cloud:
     config:
       server:
-        #git远程仓库配置
         git:
           uri: https://github.com/zhouhonggang/spring-cloud-javakc.git
           searchPaths: /config
       label: master
-
-        #native本地仓库
-#        native:
-#          search-locations: /config
 
 management:
   endpoints:
@@ -29,7 +33,8 @@ eureka:
   instance:
     hostname: localhost
     prefer-ip-address: true
-    lease-renewal-interval-in-seconds: 15
+    # eureka client发送心跳给eureka server端的频率，默认为30秒
+    leaseRenewalIntervalInSeconds: 10
   client:
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:8001/eureka/,http://${eureka.instance.hostname}:8002/eureka/

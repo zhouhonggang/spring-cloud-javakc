@@ -4,23 +4,11 @@ server:
 spring:
   application:
     name: spring-cloud-admin-server
-  security:
-    user:
-      name: javakc
-      password: 123456
+#  security:
+#    user:
+#      name: javakc
+#      password: 123456
 
-  #  如需添加邮箱预警
-  #  mail:
-  #    host: smtp.163.com
-  #    username: 15001390311@163.com
-  #    password: xxxx(授权码)
-  #    properties:
-  #      mail:
-  #        smtp:
-  #          auth: true
-  #          starttls:
-  #            enable: true
-  #            required: true
   boot:
     admin:
       ui:
@@ -28,10 +16,6 @@ spring:
       notify:
         pagerduty:
           client-url: http://127.0.0.1:${server.port}
-#        mail:
-#          from: 15001390311@163.com
-#          to: xxxxxx@163.com
-
 
 management:
   endpoints:
@@ -49,10 +33,4 @@ eureka:
       defaultZone: http://127.0.0.1:8001/eureka/,http://127.0.0.1:8002/eureka/
   instance:
     prefer-ip-address: true
-
-logging:
-  level:
-    org.springframework.cloud.gateway: WARN
-    org.springframework.http.server.reactive: DEBUG
-    org.springframework.web.reactive: DEBUG
-    reactor.ipc.netty: DEBUG
+    leaseRenewalIntervalInSeconds: 10

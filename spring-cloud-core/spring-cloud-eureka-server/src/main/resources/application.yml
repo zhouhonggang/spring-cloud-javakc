@@ -4,17 +4,44 @@ spring:
 
 eureka:
   instance:
-    #eureka的client注册到server时默认是使用hostname而不是ip,需要使用ip
+    # eureka的client注册到server时默认是使用hostname而不是ip,需要使用ip
     prefer-ip-address: true
-    #eureka主机名称
+    # eureka主机名称
     hostname: localhost
+    # 心跳，租约续约频率，单位：秒
+    lease-renewal-interval-in-seconds: 15
+    # eureka server多久没有收到心跳，则表示对应的实例过期，单位：秒。
+    lease-expiration-duration-in-seconds: 90
+
   client:
-    #表示是否从Eureka Server获取注册信息，默认为true
+    # 表示是否从Eureka Server获取注册信息，默认为true
     fetch-registry: false
-    #表示是否将自己注册到Eureka Server，默认为true
+    # 表示是否将自己注册到Eureka Server，默认为true
     register-with-eureka: false
+
   server:
-    #开启Eureka Server自我保护机制
-    enable-self-preservation: true
-    #连接对等节点超时时间默认200单位毫秒
+    ############## eureka server 续约 心跳 配置信息 ##############
+    # 连接对等节点超时时间默认200单位毫秒
     peer-node-connect-timeout-ms: 1000
+    # 设置eureka剔除服务的时间间隔
+    eviction-interval-timer-in-ms: 3000
+
+    ############## eureka server cache 配置信息 ##############
+    # 是否开启只读请求响应缓存。响应缓存机制目前使用两层缓存策略。优先读取只读缓存，读取不到后读取固定过期的读写缓存
+    use-read-only-response-cache: true
+    # 只读缓存更新频率，单位：毫秒。只读缓存定时更新任务只更新读取过请求 ，因此虽然永不过期，也会存在读取不到的情况
+    response-cache-update-interval-ms: 30
+    # 读写缓存写入后过期时间，单位：秒
+    response-cache-auto-expiration-in-seconds: 180
+    # 移除队列里过期的租约变更记录的定时任务执行频率，单位：毫秒。默认值 ：30 * 1000 毫秒
+    delta-retention-timer-interval-in-ms: 30000
+    # 租约变更记录过期时长，单位：毫秒。默认值 ： 3 * 60 * 1000 毫秒
+    retention-time-in-m-s-in-delta-queue: 180000
+
+    ############## eureka server 自我保护机制 配置信息 ##############
+    # 开启Eureka Server自我保护机制
+    enable-self-preservation: true
+    # 开启自我保护模式比例，超过该比例后开启自我保护模式
+    renewal-percent-threshold: 0.85
+    # 自我保护模式比例更新定时任务执行频率
+    renewal-threshold-update-interval-ms: 900

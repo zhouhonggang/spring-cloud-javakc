@@ -44,12 +44,15 @@ eureka:
     prefer-ip-address: true
     status-page-url-path: /actuator/info
     health-check-url-path: /actuator/health
+    leaseRenewalIntervalInSeconds: 10
   client:
     register-with-eureka: true
     fetch-registry: true
     service-url:
       defaultZone: http://127.0.0.1:8001/eureka/,http://127.0.0.1:8002/eureka/
     enabled: true
+    # eureka client间隔多久去拉取服务注册信息，默认为30秒
+    registryFetchIntervalSeconds: 5
 
 logging:
   level:
