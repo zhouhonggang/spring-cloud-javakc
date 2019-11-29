@@ -18,7 +18,6 @@
     <modules>
         <module>system-user</module>
         <module>system-role</module>
-        <module>javakc-test</module>
     </modules>
 
     <properties>
