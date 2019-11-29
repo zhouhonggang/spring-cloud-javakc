@@ -35,13 +35,13 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @Value("${name}")
-    private String name;
-
-    @GetMapping("user")
-    public String get(){
-        return name;
-    }
+//    @Value("${name}")
+//    private String name;
+//
+//    @GetMapping("user")
+//    public String get(){
+//        return name;
+//    }
 
     @ApiOperation(value="展示用户", notes="分页查询用户列表")
     @ApiImplicitParam(name = "entity", value = "用户详细实体User", required = true, dataType = "User")
