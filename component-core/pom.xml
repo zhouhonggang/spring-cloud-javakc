@@ -29,7 +29,7 @@
         <druid.version>1.1.10</druid.version>
         <!--数据库驱动版本定义-->
         <oracle.version>11.1.0.1</oracle.version><!-- 当你看到这的时候记得修改为自己的版本, 重要事情说一遍 -->
-        <mysql.version>8.0.13</mysql.version><!-- 当你看到这的时候记得修改为自己的版本, 重要事情说再说一遍 -->
+        <mysql.version>8.0.28</mysql.version><!-- 当你看到这的时候记得修改为自己的版本, 重要事情说再说一遍 -->
     </properties>
 
     <dependencyManagement>
