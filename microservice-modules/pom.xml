@@ -22,7 +22,7 @@
 
     <properties>
         <!--poi excel-->
-        <poi.version>3.17</poi.version>
+        <poi.version>4.1.1</poi.version>
         <!--itext word-->
         <itext.version>2.1.7</itext.version>
         <!--file upload -->
